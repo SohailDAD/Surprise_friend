@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surprise!</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f8ff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            animation: bodycolor 1s infinite;
+        }
+        .container {
+            /* border: 2px solid #000; */
+            border-radius: 70px;
+            text-align: center;
+            padding: 20px;
+            background-color: lightpink;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            animation: cardAnimation 5s infinite;
+            transition: transform 0.5s ease-in-out;
+        }
+        .container:hover {
+            transform: scale(1.05);
+        }
+        .message {
+            font-size: 2em;
+            color: #ff0b85;
+            margin: 0;
+        }
+        .sticker {
+            margin-top: 20px;
+            animation: bounce 2s infinite;
+        }
+        @keyframes bodycolor {
+            0%{background-color: #000;}
+            50%{background-color: pink;}
+            70%{background-color: red;}
+            80%{background-color: yellow;}
+            100%{background-color: pink;}
+        }
+        @keyframes cardAnimation {
+            0% { transform: rotate(0deg); }
+            50% { transform: rotate(10deg); }
+            100% { transform: rotate(0deg); }
+        }
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-30px); }
+            60% { transform: translateY(-15px); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="message">You're Amazing!</div>
+        <img src="red-heart-studio.png" alt="Lovely Heart" class="sticker" width="300vh" height="300vh">
+    </div>
+</body>
+</html>
