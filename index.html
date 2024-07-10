@@ -59,9 +59,21 @@
 <body>
     <div class="container">
         <div class="message">You're Amazing!
-           <p>&hearts; Fawad Faqiri &hearts;</p>
+            <p>&hearts; <span id="demo_name"></span> &hearts;</p> 
         </div>
         <img src="red-heart-studio.png" alt="Lovely Heart" class="sticker" width="200vh" height="250vh">
     </div>
+
+    <script>
+        let name;
+        name = prompt("Enter your name (10 characters or fewer):");
+        // Check if the input is a string, has 10 characters or fewer, and does not start with a space
+        if (/^[a-zA-Z][a-zA-Z\s]{0,9}$/.test(name)) {
+            document.getElementById("demo_name").innerHTML = name;
+        } else {
+            alert("Name must be 10 characters or fewer, should only contain letters, and should not start with a space.");
+        }
+    </script>
+    
 </body>
 </html>
